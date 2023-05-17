@@ -44,6 +44,7 @@ nav ul li .active {
 .nav-right {
     flex: 50%;
     padding: 10px;
+    margin-right: 20px;
     text-align: end;
 }
 
@@ -51,7 +52,7 @@ nav ul li .active {
     background-color: orangered;
     padding: 8px 20px;
     color: white;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .Card {
@@ -67,4 +68,12 @@ nav ul li .active {
 
 .icon img{
     margin-right: 20px;
+}
+
+.nav-right a:hover{
+    background-color: black;
+}
+
+.nav-left a:hover {
+    text-decoration-line: underline;
 }

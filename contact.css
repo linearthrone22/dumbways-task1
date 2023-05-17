@@ -20,13 +20,17 @@ label {
     font-size: 20px;
 }
 
+textarea {
+    resize: none;
+}
+
 input, select, textarea {
     background-color: #dfdede;
     width:100%;
     padding: 10px;
     margin-top: 5px;
-    border-radius: 15px;
-    border: 1px solid #dbdbdb;
+    border-radius: 7px;
+    border: 0px solid #dbdbdb;
 }
 
 button {
