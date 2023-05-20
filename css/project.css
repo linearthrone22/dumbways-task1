@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap');
+
+* {
+    text-decoration: none;
+    font-family: 'Roboto Slab', serif;
+}
+
+form {
+    width: 550px;
+    margin: 50px auto;
+    padding: 10px;
+}
+
+form div {
+    margin-top: 15px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+textarea {
+    resize: none;
+}
+
+input, select, textarea {
+    background-color: #dfdede;
+    width:100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 7px;
+    border: 0px solid #dbdbdb;
+}
+
+button {
+    background-color: orangered;
+    color: white;
+    padding: 6px 25px;
+    border: none;
+    border-radius: 15px;
+    margin-top: 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+form div button {
+    float: right;
+}
+
+button:hover {
+    background-color: black;
+}
+
+.input-date {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-date input {
+    color: grey;
+}
+
+.input-date div {
+    width: 48%;
+}
+
+.input-label {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0;
+}
+
+.input-label div {
+    flex: 45%;
+    display: flex;
+    justify-content:flex-start;
+}
+
+.input-label label {
+    color: grey;
+}
+
+.input-label input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-label input[type="checkbox"]:checked {
+    border-color: #007bff;
+    background-color: #007bff;
+}
+
+.input-label input[type="checkbox"], label {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.my-project {
+    background-color: #e0dede2d;
+}
+
+.my-project .project-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto 100px;
+}
+
+.project-flex .project-flex-box {
+    width: 300px;
+    box-shadow: 0 0 15px #726f6f;
+    height: 400px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.project-flex .project-flex-box img {
+    width: 90%;
+    height: 40%;
+    margin: 2% 5% 0% 5%;
+    border-radius: 15px;
+}
+
+.project-flex .project-flex-box h3, h5,p {
+    height: 9%;
+}
+
+.project-flex div h3, h5, p, .project-button {
+    margin:  5px 5% 0 5%;
+}
+
+.project-flex-box p i {
+    padding: 10px 0;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.project-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-button button {
+    width: 45%;
+}
