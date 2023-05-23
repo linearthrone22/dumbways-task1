@@ -1,62 +1,71 @@
 <html>
-    <head>
-        <title>Contact Me</title>
-        <link rel="stylesheet" href="contact.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <nav>
-            <div class="nav-left">
-              <ul>
-                <li>
-                  <img src="image/logo.png" alt="dumbways_logo" />
-                </li>
-                <li>
-                  <a href="index.html">Home</a>
-                </li>
-                <li>
-                  <a href="#">My Project</a>
-                </li>
-              </ul>
-            </div>
-            <div class="nav-right">
-              <a class="active" href="contact.html">Contact</a>
-            </div>
-        </nav>
-        <form>
-            <div>
-                <label for="input-name">Name</label>
-                <input id="input-name" height="100" type="text" required />
-            </div>
 
-            <div>
-                <label for="input-email">Email</label>
-                <input type="email" id="input-email" required />
-            </div>
+<head>
+  <title>Contact</title>
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-            <div>
-                <label for="input-phone">Phone Number</label>
-                <input for="input-phone" type="number" required />
-            </div>
+<body>
+  <nav>
+    <div class="nav-left">
+      <ul>
+        <li>
+          <img src="assets/image/logo.png" alt="dumbways_logo" />
+        </li>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="project.html">My Project</a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <a class="active" href="contact.html">Contact</a>
+    </div>
+  </nav>
+  <form>
+    <div style="text-align: center; text-decoration-line: underline;">
+      <h1>
+        Are you lonely?
+      </h1>
+    </div>
+    <div>
+      <label for="input-name">Name</label>
+      <input placeholder="Your name..." id="input-name" height="100" type="text" required />
+    </div>
 
-            <div>
-                <label for="input-subject">Subject</label>
-                <select for="input-subject">
-                <option value="" hidden>Pilih</option>
-                <option>Frontend</option>
-                <option>Backend</option>
-                <option>Fullstack</option>
-            </select>
-            </div>
+    <div>
+      <label for="input-email">Email</label>
+      <input placeholder="Your e-mail..." type="email" id="input-email" required />
+    </div>
 
-            <div>
-                <label id="input-comment">Your Message</label>
-                <textarea id="input-comment" rows="5" cols="10"></textarea>
-            </div>
-            
-            <div>
-                <button>submit</button>
-            </div>
-        </form>
-    </body>
+    <div>
+      <label for="input-phone">Phone Number</label>
+      <input placeholder="Your number..." id="input-phone" type="number" required />
+    </div>
+
+    <div>
+      <label for="input-subject">What's you are looking for?</label>
+      <select id="input-subject">
+        <option value="" hidden>I'm looking for...</option>
+        <option>I'm looking for a friend</option>
+        <option>I'm looking for a partner</option>
+        <option>I'm looking for a sugarmommy</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="input-comment">What's your type?</label>
+      <textarea placeholder="My types are..." id="input-comment" rows="5" cols="10"></textarea>
+    </div>
+
+    <div>
+      <button type="button" onclick="submitData()">Submit</button>
+    </div>
+  </form>
+  <script src="/js/contact.js"></script>
+</body>
+
 </html>

@@ -1,0 +1,150 @@
+* {
+    text-decoration: none;
+    padding: 0 0;
+    margin: 0 0;
+}
+
+.project .project-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.project .project-form form {
+    align-items: center;
+    width: 500px;
+}
+
+.project h2 {
+    padding: 50px;
+    font-size: 30;
+    font-weight: bolder 800;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+.project .project-form form input[type="text"],
+input[type="date"],
+textarea {
+    background-color: #dfdede;
+    width:100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 7px;
+    border: 0px solid #dbdbdb;
+}
+
+.project-form form textarea {
+    height: 150px;
+}
+
+.input-date {
+    display: flex;
+}
+
+.label-checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0;
+}
+
+.label-checkbox div {
+    flex: 45%;
+    padding: 3px 0;
+}
+
+.label-checkbox label {
+    color: grey;
+}
+
+.label-checkbox input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.label-checkbox input[type="checkbox"]:checked {
+    border-color: #007bff;
+    background-color: #007bff;
+}
+
+.label-checkbox input[type="checkbox"], label {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.project-form form .dropbox-image {
+}
+
+.project-form form .dropbox-image label {
+    cursor: pointer;
+    display: flex;
+    border: #c4c4c4 solid;
+    justify-content: space-between;
+    border-radius: 12px;
+} 
+
+.project-form form .dropbox-image label p {
+    font-size: auto;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    padding: 0 8px;
+    border-radius: 8px;
+    color: grey; 
+}
+
+
+
+.project .project-form form .submitbutton button {
+    background-color: black;
+    font-size: 25px;
+    border-radius: 30px;
+    color: white;
+    padding: 4px 30px;
+    float: right;
+    font-weight: 400;
+}
+
+.project .projectlist {
+    background-color: aliceblue;
+}
+
+.projectlist .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto 10px;
+}
+
+.projectlist .flex-container .projectlist {
+    border: solid grey;
+    width: 300px;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.project .projectlist p,
+h4,
+img,
+div {
+    padding: 10px 10px;
+}
+
+.projectlist .flex-container img {
+    width: 95%;
+    height: 45%;
+    margin: 0 auto;
+}
+
+.projectlist {
+    align-items: center;
+    text-align: justify
+}
