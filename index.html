@@ -3,6 +3,7 @@
 <head>
   <title>Home</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/81634d0f93.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -12,26 +13,32 @@
         <li>
           <img src="assets/image/logo.png" alt="dumbways_logo" />
         </li>
-        <li>
+        <li class="item-collapse">
           <a class="active" href="index.html">Home</a>
         </li>
-        <li>
+        <li class="item-collapse">
           <a href="project.html">My Project</a>
         </li>
       </ul>
     </div>
-    <div class="nav-right">
+    <div class="nav-right item-collapse">
       <a href="contact.html">Contact</a>
     </div>
+    <div class="nav-right" id="barsmenu">
+      <button style="background-color: transparent; border: none; cursor: pointer;" 
+      onclick=openHamburger()>
+        <i class="fa-2x fa-solid fa-bars"></i>
+      </button>
+    </div>
   </nav>
-  <div style="
-        display: flex;
-        width: 1000px;
-        margin: 50px auto;
-        padding: 50px 40px;
-        border-radius: 10px;
-        box-shadow: 0 0 15px #726f6f;
-      ">
+
+  <div class="hamburger-nav-container" id="hamburger-nav-container">
+    <a href="index.html" class="hamburger-active">Home</a>
+    <a href="project.html">Project</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="container">
     <div class="Intro">
       <h2>Hi Welcome to my hut</h2>
       <p>Halo, saya Johanes Simorangkir, berasal dari Kota Medan. Sejak kecil, minat dan ketertarikan saya terhadap
@@ -40,7 +47,7 @@
         industri teknologi dan berkontribusi dalam pengembangan solusi inovatif. Saya siap menghadapi tantangan baru
         yang menuntut pemecahan masalah dan kerja tim yang baik. Dengan antusiasme yang tinggi, saya berharap dapat
         menjadi bagian dari industri komputer yang dinamis dan berdampak positif bagi masyarakat.</p>
-      <div style="margin-top: 50px;">
+      <div class="contact-download" style="margin-top: 50px;">
         <button style="
       border-radius: 30px;
       background-color: black;
@@ -60,21 +67,14 @@
         <a href="https://wa.me/08887219491" target="none"><img src="assets/image/whatsapp.png" style="width: 50px"></a>
       </div>
     </div>
-    <div class="Card" style="
-        width: 250px;
-        height: 500px;
-        margin: 25px auto;
-        padding: 0px;
-        border-radius: 10px;
-        box-shadow: 0 0 15px #726f6f;
-        ">
+    <div class="Card">
       <img src="assets/image/image.jpg" style="width: 100%; height: 60%; border-radius: 10px 10px 0 0">
-      <div style="text-align: center; margin-bottom: 100px;">
+      <div style="text-align: center; margin-bottom: 5%;">
         <h1>Johanes</h1>
         <div>Manusia Biasa</div>
       </div>
     </div>
   </div>
+  <script src="js/index.js"></script>
 </body>
-
 </html>

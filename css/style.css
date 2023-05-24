@@ -55,7 +55,22 @@ nav ul li .active {
     border-radius: 10px;
 }
 
+.container {
+        display: flex;
+        width: 1000px;
+        margin: 50px auto;
+        padding: 50px 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px #726f6f;
+}
+
 .Card {
+    width: 250px;
+    height: 500px;
+    margin: 25px auto;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #726f6f;
     text-align:justify;
     flex: 35%;
 }
@@ -76,4 +91,68 @@ nav ul li .active {
 
 .nav-left a:hover {
     color: wheat;
+}
+
+
+#barsmenu {
+    display: none;
+}
+
+.hamburger-nav-container {
+    font-size: 23px;
+    list-style-type: none;
+    display: none;
+}
+
+.hamburger-nav-container a {
+    text-decoration: none;
+    color: #fff;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.hamburger-nav-container .hamburger-active {
+    text-decoration: none;
+    color: #fff;
+    background-color: orangered;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #fff;
+
+}
+
+@media only screen and (max-width: 950px) {
+    #barsmenu {
+        display: block;
+    }
+
+    .item-collapse {
+        display: none;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .Intro{
+        text-align: justify;
+    }
+
+    .Intro .icon, .contact-download {
+        text-align: center;
+    }
+
+    .Card {
+        width: 90%;
+        font-size: smaller;
+    }
+
+    
 }

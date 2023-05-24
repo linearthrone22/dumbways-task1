@@ -33,7 +33,7 @@ input, select, textarea {
     border: 0px solid #dbdbdb;
 }
 
-button {
+form button {
     background-color: orangered;
     color: white;
     padding: 6px 25px;
@@ -47,4 +47,11 @@ button {
 
 button:hover {
     background-color: black;
+}
+
+@media only screen and (max-width: 950px) {
+  form {
+    width: 80%;
+  }
+
 }

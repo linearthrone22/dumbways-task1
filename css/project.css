@@ -112,7 +112,7 @@ textarea {
   border: 0px solid #dbdbdb;
 }
 
-button {
+form button {
   background-color: orangered;
   color: white;
   padding: 6px 25px;
@@ -191,7 +191,7 @@ label {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: auto 100px;
+  margin: auto 2px;
 }
 
 .project-flex .project-flex-box {
@@ -205,7 +205,7 @@ label {
 }
 
 .project-flex .project-flex-box:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 .project-flex .project-flex-box img {
@@ -250,4 +250,15 @@ label {
 .project-flex .project-button button:hover {
   background-color: wheat;
   color: black;
+}
+
+@media only screen and (max-width: 950px) {
+  form {
+    width: 80%;
+  }
+
+  .project-flex-box {
+    width: 5px;
+    height: 5px;
+  }
 }
