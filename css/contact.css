@@ -5,6 +5,10 @@
     font-family: 'Roboto Slab', serif;
 }
 
+nav .nav-right a {
+    background-color: orangered;
+}
+
 form {
     width: 550px;
     margin: 50px auto;
