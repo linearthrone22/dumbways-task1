@@ -77,6 +77,7 @@ nav ul li {
 
 nav ul li a {
     color: black;
+    transition: color 0.3s ease;
 }
 
 nav ul li .active {
@@ -100,16 +101,29 @@ nav ul li .active {
     padding: 8px 20px;
     color: black;
     border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-@media only screen and (min-width: 100px) {
+@media only screen and (min-width: 1000px) {
         
     #barsmenu, .hamburger-nav-container {
     display: none;
-}
+    }
 }
 
 @media only screen and (max-width: 950px) {
+
+
+    .hamburger-nav-container a {
+        text-decoration: none;
+        color: black;
+        background-color: #fdb123fd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        transition: background-color 0.3s ease;
+    }
 
     .hamburger-nav-container {
         font-size: 23px;
@@ -121,26 +135,28 @@ nav ul li .active {
         animation-duration: .3s;
         animation-timing-function: ease-out;
         z-index: 9998;
+        transition: background-color 0.3 ease;
+    }
+
+    #barsmenu i {
+        transition: color 0.3s ease;
     }
 
     .hamburger-nav-container a:hover {
-        background-color: orangered;
+        color: wheat;
     }
-      
+    
+    #barsmenu i:hover {
+        color: wheat;
+    }
+
+    .hamburger-nav-container a div:hover {
+        background-color: wheat;
+    }
 
     @keyframes slide-in {
         0% {transform: translateY(-100%);}
         100% {transform: translateY(0);}
-    }
-
-    .hamburger-nav-container a {
-        text-decoration: none;
-        color: #fff;
-        background-color: orange;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
     }
 
     .hamburger-nav-container .hamburger-active {
@@ -153,6 +169,13 @@ nav ul li .active {
         padding: 10px;
     }
 
+    .hamburger-nav-container a div {
+        background-color: orangered;
+        color: black;
+        padding: 1px 10px;
+        border-radius: 10px;
+        transition: 0.3s ease;
+    }
 
     nav {
 

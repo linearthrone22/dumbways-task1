@@ -11,53 +11,6 @@ body {
   background-color: #f5f5f5;
 }
 
-nav {
-  background-color: orange;
-  display: flex;
-  align-items: center;
-  height: 10vh;
-}
-
-nav ul {
-  display: flex;
-  list-style-type: none;
-  align-items: center;
-}
-
-nav ul li {
-  margin-right: 25px;
-  font-size: 20px;
-}
-
-nav ul li a {
-  color: black;
-  transition: color 0.3s ease;
-}
-
-nav ul li .active {
-  color: white;
-}
-
-.nav-left {
-  flex: 50%;
-  color: red;
-}
-
-.nav-right {
-  flex: 50%;
-  padding: 10px;
-  margin-right: 20px;
-  text-align: end;
-}
-
-.nav-right a {
-  background-color: orangered;
-  padding: 8px 20px;
-  color: black;
-  border-radius: 10px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
 .Card {
   text-align: justify;
   flex: 35%;
