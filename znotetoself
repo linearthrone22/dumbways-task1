@@ -12,3 +12,5 @@ to overlay in html with css =
     absolute: Elements are positioned relative to the nearest positioned ancestor (parent element with a position value other than static) or the initial containing block if there's no positioned ancestor. This allows precise control over the element's position using top, bottom, left, or right offsets. z-index can be used to determine the stacking order of absolutely positioned elements.
     fixed: Elements are positioned relative to the browser window, meaning they remain in the same position even if the page is scrolled. It behaves similarly to absolute, but the positioning is fixed with respect to the viewport. z-index can also be applied to fixed positioned elements.
 
+border-radius: atas-kiri atas-kanan bawah-kanan bawah-kiri;
+
