@@ -1,8 +1,47 @@
 .form {
     width: 100%;
     margin: 50px auto;
-    padding: 10px;
   }
+
+.rating-container {
+    background-color: rgba(128, 128, 128, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating-buttons {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    box-shadow: 0 0 10px #797878;
+    border-radius: 15px;
+    position: sticky;
+    padding: 0 30px;
+}
+
+.rating-buttons button {
+    border-radius: 0px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 5px 10px;
+    background-color: white;
+    transition: 0.3s ease;
+    position: sticky;
+    z-index: 9998;
+    transform: scale(1.35);
+}
+
+.rating-buttons button:hover {
+    transform: scale(1);
+    border-radius: 10px;
+}
+
+.form i {
+    color: orange;
+}
 
 .testimonials {
     display: flex;
@@ -13,31 +52,32 @@
 }
 
 .testimonial {
-    box-shadow: 0 0 10px rgb(121, 120, 120);
-    width: 25%;
+    box-shadow: 0 0 10px #797878;
+    width: 30%;
     justify-content: center;
-    border-radius: 15px;
+    border-radius: 15px 15px 7px 7px;
     background-color: white;
-    padding: 15px 15px;
     margin: 30px 0 0;
     transition: 0.3s ease;
 }
 
 .testimonial:hover {
-    transform: scale(1.03);
+    transform: scale(1.005);
     background-color: #fefefe;
 }
 
 .testimonial img{
     width: 100%;
-    height: 200px;
+    height: 20em;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 15px 15px 0 0;
 }
+
 
 .quote {
     font-style: italic;
     text-align: center;
+    padding-bottom: 5px;
 }
 
 .author {
@@ -53,6 +93,12 @@
 .text {
     display: flex;
     justify-content: space-between;
+    margin: 0 1em;
+}
+
+.rating {
+    text-align: center;
+    margin-bottom: 1em;
 }
 
 @media only screen and (max-width: 900px) {
@@ -62,6 +108,16 @@
 
     .testimonial img {
         height: 250px;
+    }
+
+    .rating-buttons {
+        width: 90%;
+        padding: 0 0;
+        border-radius: 0 ;
+    }
+
+    .rating-buttons button {
+        transform: scale(1);
     }
 
 }

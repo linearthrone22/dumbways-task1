@@ -136,6 +136,24 @@ label {
   cursor: pointer;
 }
 
+.dropbox {
+  background-color: #dfdede;
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 7px;
+  border: 0px solid #dbdbdb;
+}
+
+.dropbox p{
+  font-weight: normal;
+  color: grey;
+  font-size: 14px;
+  background: #c5c3c3;
+  width: 3.5em;
+  padding: 10px 10px;
+  border-radius: 10px 0px 0 10px;
+}
+
 .my-project {
   background-color: #e0dede2d;
 }

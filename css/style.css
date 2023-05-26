@@ -122,7 +122,7 @@ nav ul li .active {
         align-items: center;
         justify-content: center;
         padding: 10px;
-        transition: background-color 0.3s ease;
+        transition: color 0.3s ease;
     }
 
     .hamburger-nav-container {
@@ -135,7 +135,7 @@ nav ul li .active {
         animation-duration: .3s;
         animation-timing-function: ease-out;
         z-index: 9998;
-        transition: background-color 0.3 ease;
+        transition: background-color 5 ease;
     }
 
     #barsmenu i {
@@ -147,7 +147,7 @@ nav ul li .active {
     }
     
     #barsmenu i:hover {
-        color: wheat;
+        color: orangered;
     }
 
     .hamburger-nav-container a div:hover {
@@ -162,7 +162,6 @@ nav ul li .active {
     .hamburger-nav-container .hamburger-active {
         text-decoration: none;
         color: #fff;
-        background-color: orangered;
         display: flex;
         align-items: center;
         justify-content: center;
