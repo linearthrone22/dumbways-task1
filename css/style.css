@@ -8,11 +8,12 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #fdfaf4;
 }
 
 .container {
     display: flex;
-    width: 1000px;
+    width: 80%;
     margin: 50px auto;
     padding: 50px 40px;
     border-radius: 10px;
@@ -20,14 +21,15 @@ body {
 }
 
 .Card {
-    width: 250px;
-    height: 500px;
     margin: 25px auto;
-    padding: 0px;
     border-radius: 10px;
     box-shadow: 0 0 15px #726f6f;
     text-align: justify;
-    flex: 35%;
+    width: 300px;
+}
+
+.Card img {
+    object-fit: cover;
 }
 
 .Intro {
@@ -58,7 +60,7 @@ nav {
     background-color: orange;
     display: flex;
     align-items: center;
-    height: 10vh;
+    height: 4rem;
     box-shadow: grey 0 1px 10px;
     z-index: 9999;
     position: sticky;

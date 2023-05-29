@@ -11,29 +11,6 @@ body {
   background-color: #f5f5f5;
 }
 
-.Card {
-  text-align: justify;
-  flex: 35%;
-}
-
-.Intro {
-  flex: 65%;
-  margin: 25px auto;
-  padding: 0px;
-}
-
-.icon img {
-  margin-right: 20px;
-}
-
-.nav-right a:hover {
-  background-color: wheat;
-  color: black;
-}
-
-.nav-left a:hover {
-  color: wheat;
-}
 
 form {
   width: 550px;

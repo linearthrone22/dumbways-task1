@@ -1,3 +1,11 @@
+dumbways task   1. Creating Card
+                2. Contact form
+                3. Form Submission
+                4. Creating Blog
+                5. Count Post Duration
+                6. CSS Responsive
+                7. OOP Javascript
+                8. HOF dan CALLBACK
 to overlay in html with css =
     1. z-index: The z-index property controls the stacking order of positioned elements on the z-axis (the depth or "front-to-back" order). It specifies how elements should be layered and displayed in relation to each other. Elements with a higher z-index value appear in front of elements with a lower z-index value. The z-index property only works on positioned elements, which means you need to apply a position value other than static to the element for z-index to have any effect.
 
@@ -14,3 +22,32 @@ to overlay in html with css =
 
 border-radius: atas-kiri atas-kanan bawah-kanan bawah-kiri;
 
+
+  new Testimonial(
+    "Sangat Terampil Meongg!",
+    "- Kucingnya Cleopatra",
+    "https://images.unsplash.com/photo-1607544155801-4f5af2e88dc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    "Oktober 69 SM",
+    4
+  ),
+  new Testimonial(
+    "Menginspirasi Sekali!",
+    "- Monalisa",
+    "https://images.unsplash.com/photo-1423742774270-6884aac775fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
+    "01-01-1503",
+    5
+  ),
+  new Testimonial(
+    "Sellernya Mantan Saya!",
+    "- Rahmat",
+    "https://plus.unsplash.com/premium_photo-1683639447442-164725904c84?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
+    "09-04-2023",
+    1
+  ),
+  new Testimonial(
+    "Oke lah!",
+    "- Raul",
+    "https://images.unsplash.com/photo-1632318676766-a64e84632e31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80",
+    "08-16-2022",
+    3
+  ),
