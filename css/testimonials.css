@@ -11,7 +11,6 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url(path/to/your/image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -58,7 +57,7 @@ body {
 }
 
 .rating-buttons button:hover {
-    transform: scale(1.25) rotate(-3deg);
+    transform: scale(1.25);
     border-radius: 7px;
     background-color: var(--secondary-color);
     box-shadow: 0 0 5px var(--secondary-color);
@@ -94,11 +93,10 @@ body {
     background-color: var(--background-color);
     margin: 30px 0 0;
     transition: 0.3s ease;
-    transform: rotate(-1deg);
 }
 
 .testimonial:hover {
-    transform: scale(1.02) rotate(3deg);
+    transform: scale(1.01);
     background-color: var(--background-color);
     box-shadow: 0 0 15px var(--shadow-color);
     transition: 0.3s ease;

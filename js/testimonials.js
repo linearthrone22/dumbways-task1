@@ -64,6 +64,16 @@ const testimonialData = [
     3
   ),
 ];
+// Fungsi untuk menyaring testimonial berdasarkan rating
+function filterTestimonialsByRating(rating) {
+  const filteredTestimonials = testimonialData.filter((testimonial) => testimonial.rating === rating);
+  renderTestimonials(filteredTestimonials);
+}
+
+// Fungsi untuk menampilkan semua testimonial
+function showAllTestimonials() {
+  renderTestimonials(testimonialData);
+}
 
 // Fungsi untuk merender testimonial ke dalam HTML
 function renderTestimonials(testimonials) {
@@ -80,16 +90,6 @@ function renderTestimonials(testimonials) {
   }
 }
 
-// Fungsi untuk menyaring testimonial berdasarkan rating
-function filterTestimonialsByRating(rating) {
-  const filteredTestimonials = testimonialData.filter((testimonial) => testimonial.rating === rating);
-  renderTestimonials(filteredTestimonials);
-}
-
-// Fungsi untuk menampilkan semua testimonial
-function showAllTestimonials() {
-  renderTestimonials(testimonialData);
-}
 
 // Menambahkan event listener pada tombol rating
 const ratingButtons = document.querySelectorAll(".rating-button");
@@ -97,6 +97,7 @@ ratingButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const rating = parseInt(button.dataset.rating);
     filterTestimonialsByRating(rating);
+    console.log(`showing rating ${rating} testimonial`);
   });
 });
 

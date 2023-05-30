@@ -85,7 +85,6 @@ function calculateDuration(startDate, finishDate) {
   return {
     years: years,
     months: months,
-    weeks: weeks,
     days: days
   };
 }
@@ -100,9 +99,6 @@ function formatDuration(duration) {
   }
   if (months > 0) {
     formattedDuration += `${months} ${months === 1 ? 'month' : 'months'}, `;
-  }
-  if (weeks > 0) {
-    formattedDuration += `${weeks} ${weeks === 1 ? 'week' : 'weeks'}, `;
   }
   if (days > 0) {
     formattedDuration += `${days} ${days === 1 ? 'day' : 'days'}`;

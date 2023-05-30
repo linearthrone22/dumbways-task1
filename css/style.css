@@ -13,7 +13,7 @@ body {
 
 .container {
     display: flex;
-    width: 80%;
+    width: 70rem;
     margin: 50px auto;
     padding: 50px 40px;
     border-radius: 10px;
@@ -46,7 +46,7 @@ body {
     background-color: wheat;
 }
 
-.nav-left a:hover {
+.nav-center a:hover {
     color: wheat;
 }
 
@@ -64,6 +64,9 @@ nav {
     box-shadow: grey 0 1px 10px;
     z-index: 9999;
     position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 nav ul {
@@ -87,12 +90,15 @@ nav ul li .active {
 }
 
 .nav-left {
-    flex: 50%;
-    color: red;
+    flex: 25%;
+    margin-left: 40px;
+}
+
+.nav-center {
 }
 
 .nav-right {
-    flex: 50%;
+    flex: 25%;
     padding: 10px;
     margin-right: 20px;
     text-align: end;
@@ -106,10 +112,10 @@ nav ul li .active {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 951px) {
         
-    #barsmenu, .hamburger-nav-container {
-    display: none;
+    .hamburger-nav-container {
+    transform: scale(0);
     }
 }
 
@@ -131,9 +137,10 @@ nav ul li .active {
         font-size: 23px;
         list-style-type: none;
         display: none;
-        position: absolute;
+        position: fixed;
         width: 100%;
         animation-name: slide-in;
+        transform: scale(1);
         animation-duration: .3s;
         animation-timing-function: ease-out;
         z-index: 9998;
@@ -179,8 +186,7 @@ nav ul li .active {
     }
 
     nav {
-
-        padding: .8em 5em;
+        
     }
 
     #barsmenu {
