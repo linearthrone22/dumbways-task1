@@ -1,6 +1,6 @@
 let name = "Johanes";
 
-function submitData() {
+function contactme() {
   let name = document.getElementById("input-name").value;
   let email = document.getElementById("input-email").value;
   let phone = document.getElementById("input-phone").value;

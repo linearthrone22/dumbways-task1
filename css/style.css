@@ -1,220 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap');
+
+@import url('https://api.fontshare.com/v2/css?f[]=switzer@101,600,701,800,501,601,900,100,700,901,400,201,401,200,300,301,801,500&display=swap');
 
 * {
-    text-decoration: none;
-    font-family: 'Roboto Slab', serif;
+  font-family: 'Switzer', sans-serif;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #fdfaf4;
+#ppc-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 3em auto 64px auto;
+  grid-gap: 3em;
+  justify-items: center;
+  max-width: fit-content;
 }
 
-.container {
-    display: flex;
-    width: 70rem;
-    margin: 50px auto;
-    padding: 50px 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px #726f6f;
+@media only screen and (min-width: 768px) {
+  #ppc-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.Card {
-    margin: 25px auto;
-    border-radius: 10px;
-    box-shadow: 0 0 15px #726f6f;
-    text-align: justify;
-    width: 300px;
+@media only screen and (min-width: 992px) {
+  #ppc-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.Card img {
-    object-fit: cover;
+i:not(.hover-exception), .ppc-title {
+  transition: color .3s ease-out;
 }
 
-.Intro {
-    flex: 65%;
-    margin: 25px auto;
-    padding: 0px;
+i:hover:not(.hover-exception), .ppc-title:hover {
+  color: #ff7300;
 }
 
-.icon img {
-    margin-right: 20px;
-}
-
-.nav-right a:hover {
-    background-color: wheat;
-}
-
-.nav-center a:hover {
-    color: wheat;
-}
-
-
-#barsmenu, .hamburger-nav-container {
-    display: none;
-}
-
-
-nav {
-    background-color: orange;
-    display: flex;
-    align-items: center;
-    height: 4rem;
-    box-shadow: grey 0 1px 10px;
-    z-index: 9999;
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-nav ul {
-    display: flex;
-    list-style-type: none;
-    align-items: center;
-}
-
-nav ul li {
-    margin-right: 25px;
-    font-size: 20px;
-}
-
-nav ul li a {
-    color: black;
-    transition: color 0.3s ease;
-}
-
-nav ul li .active {
-    color: white;
-}
-
-.nav-left {
-    flex: 25%;
-    margin-left: 40px;
-}
-
-.nav-center {
-}
-
-.nav-right {
-    flex: 25%;
-    padding: 10px;
-    margin-right: 20px;
-    text-align: end;
-}
-
-.nav-right a {
-    background-color: orangered;
-    padding: 8px 20px;
-    color: black;
-    border-radius: 10px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-@media only screen and (min-width: 951px) {
-        
-    .hamburger-nav-container {
-    transform: scale(0);
-    }
-}
-
-@media only screen and (max-width: 950px) {
-
-
-    .hamburger-nav-container a {
-        text-decoration: none;
-        color: black;
-        background-color: #fdb123fd;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        transition: color 0.3s ease;
-    }
-
-    .hamburger-nav-container {
-        font-size: 23px;
-        list-style-type: none;
-        display: none;
-        position: fixed;
-        width: 100%;
-        animation-name: slide-in;
-        transform: scale(1);
-        animation-duration: .3s;
-        animation-timing-function: ease-out;
-        z-index: 9998;
-        transition: background-color 5 ease;
-    }
-
-    #barsmenu i {
-        transition: color 0.3s ease;
-    }
-
-    .hamburger-nav-container a:hover {
-        color: wheat;
-    }
-    
-    #barsmenu i:hover {
-        color: orangered;
-    }
-
-    .hamburger-nav-container a div:hover {
-        background-color: wheat;
-    }
-
-    @keyframes slide-in {
-        0% {transform: translateY(-100%);}
-        100% {transform: translateY(0);}
-    }
-
-    .hamburger-nav-container .hamburger-active {
-        text-decoration: none;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-    }
-
-    .hamburger-nav-container a div {
-        background-color: orangered;
-        color: black;
-        padding: 1px 10px;
-        border-radius: 10px;
-        transition: 0.3s ease;
-    }
-
-    nav {
-        
-    }
-
-    #barsmenu {
-        display: block;
-    }
-
-    .item-collapse {
-        display: none;
-    }
-
-    .container {
-        flex-direction: column;
-        width: 80%;
-    }
-
-    .Intro p {
-        text-align: justify;
-    }
-
-    .Intro .icon,
-    .contact-download {
-        text-align: center;
-    }
-
-    .Card {
-        width: 90%;
-        font-size: smaller;
-    }
-
-
+.navbar {
+    background-color: orange !important;
 }

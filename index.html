@@ -1,83 +1,338 @@
 <html>
 
 <head>
-  <title>Home</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title></title>
   <script src="https://kit.fontawesome.com/81634d0f93.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-  <nav>
-    <div class="nav-left">
-      <img src="assets/image/logo.png" alt="dumbways_logo" />
-    </div>
-    <div class="nav-center">
-      <ul>
-        <li class="item-collapse">
-          <a class="active" href="#">Home</a>
-        </li>
-        <li class="item-collapse">
-          <a href="project.html">My Project</a>
-        </li>
-        <li class="item-collapse">
-          <a href="testimonials.html">Testimonials</a>
-        </li>
-      </ul>
-    </div>
-    <div class="nav-right item-collapse">
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="nav-right" id="barsmenu">
-      <button style="background-color: transparent; border: none; cursor: pointer;" onclick=openHamburger()>
-        <i class="fa-2x fa-solid fa-bars"></i>
+<body class="bg-body-secondary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="assets/image/logo.png"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
+      <div class="collapse navbar-collapse justify-content-end text-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link  active" aria-current="page" href="index.html">
+              <i class="fa-solid fa-house"></i> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#add-project">
+              <i class="fa-solid fa-file-circle-plus"></i> Add Project
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-collapse collapse justify-content-end text-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item btn btn-outline-danger btn-sm">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contact">
+              <i class="fa-solid fa-address-book"></i> Contact
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
-  <div class="hamburger-nav-container" id="hamburger-nav-container">
-    <a href="#" class="hamburger-active">Home</a>
-    <a href="project.html">Project</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="contact.html">
-      <div>Contact</div>
-    </a>
+  <div>
+  <!-- card -->
+
+    <div class="container mt-5" style="margin-bottom: 16rem;">
+
+      <div class="card rounded-5 border-0 shadow-sm p-4 mx-auto d-flex flex-lg-row align-items-center gap-5"
+        id="outer-card" style="max-width: 90%;">
+        <div class="card-body">
+
+          <h3 class="card-title" id="scroll-1">Hi Welcome To My Hut!</h3>
+          <p class="card-text lh-sm" style="text-align: justify;">Greetings! I'm Johanes Simorangkir, hailing from the
+            vibrant city of Medan. My lifelong fascination with computers has fueled an unwavering passion within me. As
+            a tenacious graduate of SMK TKJ, I'm driven to constantly nurture and expand my knowledge and skills in the
+            ever-evolving realm of technology.
+          </p>
+          <div class="mt-5 d-flex gap-3 justify-content-center justify-content-lg-start flex-column flex-md-row">
+            <button data-bs-toggle="modal" data-bs-target="#send-message" class="btn rounded-pill px-4 btn-warning">
+              Contact
+            </button>
+            <a href="#" class="d-flex justify-content-center align-items-center"
+              style="text-decoration: none; color: unset;">
+              Download CV
+            </a>
+          </div>
+
+          <div class="d-flex gap-3 mt-5 justify-content-center justify-content-lg-start">
+            <a href="https://wa.me/08887219491" target="_blank" style="text-decoration: none; color: unset;">
+              <i class="fa-brands fa-whatsapp fa-2xl fa-fw" style="font-size: 36px;"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" style="text-decoration: none; color: unset;">
+              <i class="fa-brands fa-instagram fa-2xl fa-fw" style="font-size: 36px;"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100008806607696" target="_blank"
+              style="text-decoration: none; color: unset;">
+              <i class="fa-brands fa-facebook-f fa-2xl fa-fw" style="font-size: 36px;"></i>
+            </a>
+            <a href="https://twitter.com/linearthrone22" target="_blank" style="text-decoration: none; color: unset;">
+              <i class="fa-brands fa-twitter fa-2xl fa-fw" style="font-size: 36px;"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="card rounded-4 border-0 shadow-sm text-center" style="width: 800px; max-width: fit-content;"
+          id="inner-card">
+          <img src="./Assets/Image/profil.jpg" class="card-img-top rounded-top-4 img-fluid" alt="Profile"
+            style="height: 300px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Johanes</h5>
+            <p class="card-text">Fullstack Developer</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!--  -->
+
+    <!-- projects -->
+
+    <div class="bg-body container-fluid p-5 rounded-top-5 shadow-sm">
+
+      <div>
+
+        <div class="d-flex gap-3 justify-content-center align-items-center">
+          <h3 class="my-0 lh-md">MY PROJECTS</h3>
+          <i class="fa-regular fa-square-plus fa-2xl" data-bs-toggle="modal" data-bs-target="#add-project"
+            style="cursor: pointer;"></i>
+        </div>
+
+        <div class="container" id="ppc-container">
+
+          <div class="card rounded-4 border-0 shadow-sm ppc" style="width: 16rem;">
+            <img src="https://ewr1.vultrobjects.com/lmsbzzbx/attachment/95nz3nTask%20Day%203.png"
+              class="rounded-top-4 card-img-top">
+            <div class="card-body">
+              <h6>Creating Card</h6>
+              <h8 class="text-muted">duration: 1 day</h8>
+              <p style="margin: 0;">Creating introduction card in a website using ...</p>
+              <div class="d-flex gap-2 my-4">
+                <i class="fab fa-html5 fa-xl"></i>
+                <i class="fab fa-css3-alt fa-xl"></i>
+                <i class="fab fa-js fa-xl"></i>
+                <i class="fas fa-image fa-xl"></i>
+              </div>
+              <div class="d-flex flex-row gap-3 justify-content-evenly">
+                <button class="btn rounded-pill btn-outline-dark btn-sm w-50">Edit</button>
+                <button class="btn rounded-pill btn-outline-danger btn-sm w-50">Delete</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card rounded-4 border-0 shadow-sm ppc" style="width: 16rem;">
+            <img src="https://ewr1.vultrobjects.com/lmsbzzbx/attachment/95nz3nTask%20Day%203.png"
+              class="rounded-top-4 card-img-top">
+            <div class="card-body">
+              <h6>Form Submission</h6>
+              <h8 class="text-muted">duration: 1 day</h8>
+              <p style="margin: 0;">Creating Form submission for an email using ...</p>
+              <div class="d-flex gap-2 my-4">
+                <i class="fab fa-html5 fa-xl"></i>
+                <i class="fab fa-css3-alt fa-xl"></i>
+                <i class="fab fa-js fa-xl"></i>
+                <i class="fas fa-image fa-xl"></i>
+              </div>
+              <div class="d-flex flex-row gap-3 justify-content-evenly">
+                <button class="btn rounded-pill btn-outline-dark btn-sm w-50">Edit</button>
+                <button class="btn rounded-pill btn-outline-danger btn-sm w-50">Delete</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card rounded-4 border-0 shadow-sm ppc" style="width: 16rem;">
+            <img src="https://ewr1.vultrobjects.com/lmsbzzbx/attachment/95nz3nTask%20Day%203.png"
+              class="rounded-top-4 card-img-top">
+            <div class="card-body">
+              <h6>Navbar</h6>
+              <h8 class="text-muted">duration: 2 day</h8>
+              <p style="margin: 0;">Creating a navigation bar using ...</p>
+              <div class="d-flex gap-2 my-4">
+                <i class="fab fa-html5 fa-xl"></i>
+                <i class="fab fa-css3-alt fa-xl"></i>
+                <i class="fab fa-js fa-xl"></i>
+              </div>
+              <div class="d-flex flex-row gap-3 justify-content-evenly">
+                <button class="btn rounded-pill btn-outline-dark btn-sm w-50">Edit</button>
+                <button class="btn rounded-pill btn-outline-danger btn-sm w-50">Delete</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card rounded-4 border-0 shadow-sm ppc" style="width: 16rem;">
+            <img src="https://ewr1.vultrobjects.com/lmsbzzbx/attachment/95nz3nTask%20Day%203.png"
+              class="rounded-top-4 card-img-top">
+            <div class="card-body">
+              <h6>Improve self</h6>
+              <h8 class="text-muted">duration: every day</h8>
+              <p style="margin: 0;">Improving your self with great care and ...</p>
+              <div class="d-flex gap-2 my-4">
+              </div>
+              <div class="d-flex flex-row gap-3 justify-content-evenly">
+                <button class="btn rounded-pill btn-outline-dark btn-sm w-50">Edit</button>
+                <button class="btn rounded-pill btn-outline-danger btn-sm w-50">Delete</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="container">
-    <div class="Intro">
-      <h2>Hi Welcome to my hut</h2>
-      <p>Halo, saya Johanes Simorangkir, berasal dari Kota Medan. Sejak kecil, minat dan ketertarikan saya terhadap
-        bidang komputer tak pernah berkurang. Saya adalah seorang lulusan SMK TKJ yang penuh semangat untuk terus
-        mengembangkan pengetahuan dan keterampilan saya di dunia komputer. Saya ingin menjadi seorang profesional di
-        industri teknologi dan berkontribusi dalam pengembangan solusi inovatif. Saya siap menghadapi tantangan baru
-        yang menuntut pemecahan masalah dan kerja tim yang baik. Dengan antusiasme yang tinggi, saya berharap dapat
-        menjadi bagian dari industri komputer yang dinamis dan berdampak positif bagi masyarakat.</p>
-      <div class="contact-download" style="margin-top: 50px;">
-        <a href="contact.html" style="background-color: black; padding: 10px 10px; border-radius: 20px; color: white; ">
-          contact
-        </a>
-          <button type="submit" style="border: none; background-color:white ; ">download CV 
-          <img src="assets/image/download.png" style="width: 15px" alt="buttonpng" />
-      </div>
-      </button><br>
-      <div class="icon" style="margin-top: 50px;">
-        <a href="https://www.facebook.com/profile.php?id=100008806607696" target="none"><img
-            src="assets/image/facebook.png" style="width: 50px"></a>
-        <a href="https://instagram.com" target="none"><img src="assets/image/instagram.png" style="width: 50px"></a>
-        <a href="https://twitter.com/linearthrone22" target="none"><img src="assets/image/twitter.png"
-            style="width: 50px"></a>
-        <a href="https://wa.me/08887219491" target="none"><img src="assets/image/whatsapp.png" style="width: 50px"></a>
-      </div>
-    </div>
-    <div class="Card">
-      <img src="assets/image/image.jpg" style="width: 100%; height: 70%; border-radius: 10px 10px 0 0">
-      <div style="text-align: center; flex: 20%;">
-        <h1>Johanes</h1>
-        <div>Manusia Biasa</div>
+  <!-- add-project -->
+  <div class="modal fade" id="add-project" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-scrollable">
+
+      <div class="modal-content rounded-4">
+
+        <div class="modal-header bg-body-tertiary">
+          <h4 class="modal-title" id="staticBackdropLabel">Add Project</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="projectname" class="form-label">Project Name</label>
+              <input placeholder="Project name..." id="projectname" class="form-control" type="text" required />
+            </div>
+
+            <div class="row mb-3">
+              <div class="col">
+                <label class="form-label">Start Date</label>
+                <input id="startdate" class="form-control" type="date" />
+              </div>
+              <div class="col">
+                <label class="form-label">End Date</label>
+                <input id="enddate" class="form-control" type="date">
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="inputdesc" class="form-label">Description</label>
+              <textarea placeholder="Project description..." id="inputdesc" class="form-control" rows="5"></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Assets used</label>
+              <div class="row">
+                <div class="col-6 col-md-6">
+                  <div class="form-check">
+                    <input id="bootstrap" class="form-check-input" type="checkbox" />
+                    <label for="bootstrap" class="form-check-label">Bootstrap</label>
+                  </div>
+                </div>
+                <div class="col-6 col-md-6">
+                  <div class="form-check">
+                    <input id="css" class="form-check-input" type="checkbox" />
+                    <label for="css" class="form-check-label">CSS</label>
+                  </div>
+                </div>
+                <div class="col-6 col-md-6">
+                  <div class="form-check">
+                    <input id="js" class="form-check-input" type="checkbox" />
+                    <label for="js" class="form-check-label">JavaScript</label>
+                  </div>
+                </div>
+                <div class="col-6 col-md-6">
+                  <div class="form-check">
+                    <input id="Go" class="form-check-input" type="checkbox" />
+                    <label for="Go" class="form-check-label">Go</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="mb-3">
+              <label for="input-image" class="form-label">Upload Image</label>
+              <label for="input-image" class="form-label">
+              </label>
+              <input placeholder="Your number..." id="input-image" class="form-control" type="file" required />
+            </div>
+
+            <div class="d-grip gap-2 d-md-flex justify-content-md-end">
+              <button type="button" onclick="submitProject()" class="btn btn-primary"
+                data-bs-dismiss="modal">Submit</button>
+            </div>
+          </form>
+        </div>
+
+
       </div>
     </div>
   </div>
-  <script src="js/index.js"></script>
+
+  <!-- Contact -->
+  <div class="modal fade" id="contact" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Get In Touch</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div>
+              <label class="form-label" for="input-name">Name</label>
+              <input class="form-control" placeholder="Your name..." id="input-name" height="100" type="text" required />
+            </div>
+        
+            <div>
+              <label class="form-label" for="input-email">Email</label>
+              <input class="form-control" placeholder="Your e-mail..." type="email" id="input-email" required />
+            </div>
+        
+            <div>
+              <label class="form-label" for="input-phone">Phone Number</label>
+              <input class="form-control" placeholder="Your number..." id="input-phone" type="number" required />
+            </div>
+        
+            <div>
+              <label class="form-label" for="input-subject">What are you looking for?</label>
+              <select class="form-control" id="input-subject">
+                <option value="" hidden>I'm looking for...</option>
+                <option>I'm looking for a friend to talk to</option>
+                <option>I'm looking for a partner to spend time with</option>
+                <option>I'm looking for a sugarmommy</option>
+              </select>
+            </div>
+        
+            <div>
+              <label class="form-label" for="input-comment">What's your type?</label>
+              <textarea class="form-control" placeholder="My types are..." id="input-comment" rows="5" cols="10"></textarea>
+            </div>
+        
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="contactme()">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"></script>
+    <script src="js/addproject.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 
 </html>
