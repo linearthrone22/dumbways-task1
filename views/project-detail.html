@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Project Detail</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <style>
+    @import url('https://api.fontshare.com/v2/css?f[]=switzer@101,600,701,800,501,601,900,100,700,901,400,201,401,200,300,301,801,500&display=swap');
+
+    * {
+      font-family: 'Switzer', sans-serif;
+    }
+
+    #ppc-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      margin: 3em auto 64px auto;
+      grid-gap: 3em;
+      justify-items: center;
+      max-width: fit-content;
+    }
+
+    @media only screen and (min-width: 768px) {
+      #ppc-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media only screen and (min-width: 992px) {
+      #ppc-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    i:not(.hover-exception),
+    .ppc-title {
+      transition: transform .3s ease-out;
+    }
+
+    i:hover:not(.hover-exception),
+    .ppc-title:hover {
+      transform: scale(1.01);
+    }
+
+    .navbar {
+      background-color: orange !important;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="/public/image/logo.png"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end text-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/">
+              <i class="fa-solid fa-house"></i> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#add-project">
+              <i class="fa-solid fa-file-circle-plus"></i> Add Project
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-collapse collapse justify-content-end text-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item btn btn-outline-danger btn-sm">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contact">
+              <i class="fa-solid fa-address-book"></i> Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="p-5 shadow">
+    <h1 class="fw-bold text-center mb-4">{{.Project.ProjectName}}</h1>
+
+    <div class="d-flex flex-xxl-row flex-xl-row flex-lg-row flex-md-row flex-sm-column flex-column gap-4">
+      <div style="flex: 2;">
+        <img src="https://c4.wallpaperflare.com/wallpaper/277/354/502/feelsbadman-pepe-meme-memes-wallpaper-preview.jpg"
+          alt="project-image" style="width: 100%; object-fit: cover;" />
+      </div>
+      <div style="flex: 1;">
+        <h5>Duration</h5>
+        <div class="m-2 d-flex flex-wrap gap-2 align-items-center">
+          <div class="d-inline"><i class="fa-solid fa-calendar-days"></i> {{.StartDate}} - {{.EndDate}}</div>
+        </div>
+        <div class="m-2 d-flex flex-wrap gap-2 align-items-center">
+          <div class="d-inline"><i class="fa-solid fa-clock"></i> {{.Project.Duration}}</div>
+        </div>
+        
+
+        <h5 class="mt-5">Technologies</h5>
+        <div>
+          <div class="row row-cols-2 g-2">
+            {{if .Project.Bootstrap}}
+            <div class="col d-flex gap-2  align-items-center">
+              <i class="fab fa-bootstrap fa-xl"></i>
+              <div>Bootstrap</div>
+            </div>
+            {{end}}
+            {{if .Project.Css}}
+            <div class="col d-flex gap-2 align-items-center">
+              <i class="fab fa-css3-alt fa-xl"></i>
+              <div>CSS</div>
+            </div>
+            {{end}}
+            {{if .Project.Javascript}}
+            <div class="col d-flex gap-2 align-items-center">
+              <i class="fab fa-js fa-xl"></i>
+              <div>JavaScript</div>
+            </div>
+            {{end}}
+            {{if .Project.Golang}}
+            <div class="col d-flex gap-2 align-items-center">
+              <i class="fab fa-golang fa-xl"></i>
+              <div>Golang</div>
+            </div>
+            {{end}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      {{.Project.Description}}
+    </div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

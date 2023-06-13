@@ -1,0 +1,402 @@
+<html>
+
+<head>
+  <title>Home</title>
+  <script defer src="public/js/contact.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/81634d0f93.js" crossorigin="anonymous"></script>
+  <!-- <script defer src="public/js/addproject.js"></script> -->
+  <style>
+    @import url('https://api.fontshare.com/v2/css?f[]=switzer@101,600,701,800,501,601,900,100,700,901,400,201,401,200,300,301,801,500&display=swap');
+
+    * {
+      font-family: 'Switzer', sans-serif;
+    }
+
+    #ppc-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      margin: 3em auto 64px auto;
+      grid-gap: 3em;
+      justify-items: center;
+      max-width: fit-content;
+    }
+
+    @media only screen and (min-width: 768px) {
+      #ppc-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media only screen and (min-width: 992px) {
+      #ppc-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    i:not(.hover-exception),
+    .ppc-title {
+      transition: transform .3s ease-out;
+    }
+
+    i:hover:not(.hover-exception),
+    .ppc-title:hover {
+      transform: scale(1.09);
+    }
+
+    .navbar {
+      background-color: orange !important;
+    }
+  </style>
+
+</head>
+
+<body class="bg-body-secondary">
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="public/image/logo.png"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end text-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link  active" aria-current="page" href="#">
+              <i class="fa-solid fa-house"></i> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#add-project">
+              <i class="fa-solid fa-file-circle-plus"></i> Add Project
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-collapse collapse justify-content-end text-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item btn btn-outline-danger btn-sm">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contact">
+              <i class="fa-solid fa-address-book"></i> Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar end -->
+
+
+  <div>
+    <!-- card -->
+
+    <div class="container mt-5" style="margin-bottom: 16rem;">
+
+      <div class="card rounded-5 border-0 shadow-sm p-4 mx-auto d-flex flex-lg-row align-items-center gap-5"
+        id="outer-card" style="max-width: 90%;">
+        <div class="card-body">
+
+          <h3 class="card-title" id="scroll-1">Hi Welcome To My Hut!</h3>
+          <p class="card-text lh-sm" style="text-align: justify;">Greetings! I'm Johanes Simorangkir, hailing from the
+            vibrant city of Medan. My lifelong fascination with computers has fueled an unwavering passion within me. As
+            a tenacious graduate of SMK TKJ, I'm driven to constantly nurture and expand my knowledge and skills in the
+            ever-evolving realm of technology.
+          </p>
+          <div class="mt-5 d-flex gap-3 justify-content-center justify-content-lg-start flex-column flex-md-row">
+            <button data-bs-toggle="modal" data-bs-target="#contact" class="btn rounded-pill px-4 btn-warning">
+              Contact
+            </button>
+            <a href="#" class="d-flex justify-content-center align-items-center"
+              style="text-decoration: none; color: unset;">
+              Download CV
+            </a>
+          </div>
+
+          <div class="d-flex gap-3 mt-5 justify-content-center justify-content-lg-start">
+            <a href="https://wa.me/08887219491" target="_blank" style="text-decoration: none; color: unset;">
+              <i class="fa-brands fa-whatsapp fa-2xl fa-fw" style="font-size: 36px;"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" style="text-decoration: none; color: unset;">
+              <i class="fa-brands fa-instagram fa-2xl fa-fw" style="font-size: 36px;"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100008806607696" target="_blank"
+              style="text-decoration: none; color: unset;">
+              <i class="fa-brands fa-facebook-f fa-2xl fa-fw" style="font-size: 36px;"></i>
+            </a>
+            <a href="https://twitter.com/linearthrone22" target="_blank" style="text-decoration: none; color: unset;">
+              <i class="fa-brands fa-twitter fa-2xl fa-fw" style="font-size: 36px;"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="card rounded-4 border-0 shadow-sm text-center" style="width: 800px; max-width: fit-content;"
+          id="inner-card">
+          <img src="public/Image/profil.jpg" class="card-img-top rounded-top-4 img-fluid" alt="Profile"
+            style="height: 300px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Johanes</h5>
+            <p class="card-text">Fullstack Developer</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- card end -->
+
+    <!-- projects -->
+
+    <div class="bg-body container-fluid p-5 rounded-top-2 shadow-sm">
+
+      <div>
+
+        <div class="d-flex gap-3 justify-content-center align-items-center">
+          <h3 class="my-0 lh-md">MY PROJECTS</h3>
+          <i class="fa-regular fa-square-plus fa-xl" data-bs-toggle="modal" data-bs-target="#add-project"
+            style="cursor: pointer;"></i>
+        </div>
+        <div class="container" id="ppc-container">
+          {{range $index, $data := .Projects}}
+
+          <div class="card rounded-4 border-0 shadow-sm ppc" style="width: 16em;">
+            <img
+              src="https://c4.wallpaperflare.com/wallpaper/277/354/502/feelsbadman-pepe-meme-memes-wallpaper-preview.jpg"
+              class="rounded-top-4 card-img-top">
+            <div class="card-body">
+              <h6><a href="detail-project/{{$data.ID}}" class="text-decoration-none text-black">{{$data.ProjectName}}</a></h6>
+              <h8 class="text-muted">duration: {{$data.Duration}}</h8>
+              <p style="margin: 0;">{{$data.Description}}</p>
+              <div class="d-flex gap-2 my-4">
+                {{if $data.Bootstrap}}
+                <i class="fab fa-bootstrap fa-xl"></i>
+                {{end}}
+                {{if $data.Css}}
+                <i class="fab fa-css3-alt fa-xl"></i>
+                {{end}}
+                {{if $data.Javascript}}
+                <i class="fab fa-js fa-xl"></i>
+                {{end}}
+                {{if $data.Golang}}
+                <i class="fab fa-golang fa-xl"></i>
+                {{end}}
+              </div>
+              <div class="d-flex flex-column justify-content-evenly">
+                <form action="/edit-project/{{  $data.ID  }} " method="get">
+                  <input type="submit" class="btn rounded-pill btn-outline-dark btn-sm w-100" value="Edit">
+                  </button>
+                </form>
+                <form action="/delete-project/{{ $data.ID }}" method="POST" onsubmit="return confirm('Are you sure you want to delete {{ $data.ProjectName}}');">
+                  <input type="submit" class="btn rounded-pill btn-outline-danger btn-sm w-100" value="Delete">
+                </form>
+                
+              </div>
+            </div>
+          </div>
+          {{end}}
+          <!-- <div class="card rounded-4 border-0 shadow-sm ppc" style="width: 16rem;">
+            <img src="https://c4.wallpaperflare.com/wallpaper/277/354/502/feelsbadman-pepe-meme-memes-wallpaper-preview.jpg"
+              class="rounded-top-4 card-img-top">
+            <div class="card-body">
+              <h6>Form Submission</h6>
+              <h8 class="text-muted">duration: 1 day</h8>
+              <p style="margin: 0;">Creating Form submission for an email using ...</p>
+              <div class="d-flex gap-2 my-4">
+                <i class="fab fa-html5 fa-xl"></i>
+                <i class="fab fa-css3-alt fa-xl"></i>
+                <i class="fab fa-js fa-xl"></i>
+                <i class="fas fa-image fa-xl"></i>
+              </div>
+              <div class="d-flex flex-row gap-3 justify-content-evenly">
+                <button class="btn rounded-pill btn-outline-dark btn-sm w-50">Edit</button>
+                <button class="btn rounded-pill btn-outline-danger btn-sm w-50">Delete</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card rounded-4 border-0 shadow-sm ppc" style="width: 16rem;">
+            <img src="https://ewr1.vultrobjects.com/lmsbzzbx/attachment/95nz3nTask%20Day%203.png"
+              class="rounded-top-4 card-img-top">
+            <div class="card-body">
+              <h6>Navbar</h6>
+              <h8 class="text-muted">duration: 2 days</h8>
+              <p style="margin: 0;">Creating a navigation bar using ...</p>
+              <div class="d-flex gap-2 my-4">
+                <i class="fab fa-html5 fa-xl"></i>
+                <i class="fab fa-css3-alt fa-xl"></i>
+                <i class="fab fa-js fa-xl"></i>
+              </div>
+              <div class="d-flex flex-row gap-3 justify-content-evenly">
+                <button class="btn rounded-pill btn-outline-dark btn-sm w-50">Edit</button>
+                <button class="btn rounded-pill btn-outline-danger btn-sm w-50">Delete</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card rounded-4 border-0 shadow-sm ppc" style="width: 16rem;">
+            <img src="https://ewr1.vultrobjects.com/lmsbzzbx/attachment/95nz3nTask%20Day%203.png"
+              class="rounded-top-4 card-img-top">
+            <div class="card-body">
+              <h6>Improve self</h6>
+              <h8 class="text-muted">duration: every day</h8>
+              <p style="margin: 0;">Improving your self with great care and ...</p>
+              <div class="d-flex gap-2 my-4">
+              </div>
+              <div class="d-flex flex-row gap-3 justify-content-evenly">
+                <button class="btn rounded-pill btn-outline-dark btn-sm w-50">Edit</button>
+                <button class="btn rounded-pill btn-outline-danger btn-sm w-50">Delete</button>
+              </div>
+            </div>
+          </div> -->
+
+        </div>
+      </div>
+    </div>
+    <!-- project end -->
+  </div>
+
+  <!-- add-project modal-->
+  <div class="modal fade" id="add-project" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-scrollable">
+
+      <div class="modal-content rounded-4">
+
+        <div class="modal-header bg-body-tertiary">
+          <h4 class="modal-title" id="staticBackdropLabel">Add Project</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+
+          <form action="/add-project" method="post">
+            <div class="mb-3">
+              <label for="projectname" class="form-label">Project Name</label>
+              <input placeholder="Project name..." id="projectname" class="form-control" type="text" name="projectName"
+                required />
+            </div>
+
+            <div class="row mb-3">
+              <div class="col">
+                <label class="form-label">Start Date</label>
+                <input id="startdate" class="form-control" type="date" name="startDate" />
+              </div>
+              <div class="col">
+                <label class="form-label">End Date</label>
+                <input id="enddate" class="form-control" type="date" name="endDate">
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="inputdesc" class="form-label">Description</label>
+              <textarea placeholder="Project description..." id="inputdesc" class="form-control" rows="5"
+                name="description"></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Assets used</label>
+              <div class="row">
+                <div class="col-6 col-md-6">
+                  <div class="form-check">
+                    <input id="bootstrap" class="form-check-input" type="checkbox" name="bootstrap" />
+                    <label for="bootstrap" class="form-check-label">Bootstrap</label>
+                  </div>
+                </div>
+                <div class="col-6 col-md-6">
+                  <div class="form-check">
+                    <input id="js" class="form-check-input" type="checkbox" name="javascript" />
+                    <label for="js" class="form-check-label">Javascript</label>
+                  </div>
+                </div>
+                <div class="col-6 col-md-6">
+                  <div class="form-check">
+                    <input id="css" class="form-check-input" type="checkbox" name="css" />
+                    <label for="css" class="form-check-label">Css</label>
+                  </div>
+                </div>
+                <div class="col-6 col-md-6">
+                  <div class="form-check">
+                    <input id="Go" class="form-check-input" type="checkbox" name="golang" />
+                    <label for="Go" class="form-check-label">Golang</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="mb-3">
+              <label for="input-image" class="form-label">Upload Image</label>
+              <label for="input-image" class="form-label">
+              </label>
+              <input id="input-image" class="form-control" type="file" required />
+            </div>
+
+            <div class="d-grip gap-2 d-md-flex justify-content-md-end">
+              <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
+            </div>
+          </form>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  
+  <!-- Contact -->
+  <div class="modal fade" id="contact" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Get In Touch</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div>
+              <label class="form-label" for="input-name">Name</label>
+              <input class="form-control" placeholder="Your name..." id="input-name" height="100" type="text"
+                required />
+            </div>
+
+            <div>
+              <label class="form-label" for="input-email">Email</label>
+              <input class="form-control" placeholder="Your e-mail..." type="email" id="input-email" required />
+            </div>
+
+            <div>
+              <label class="form-label" for="input-phone">Phone Number</label>
+              <input class="form-control" placeholder="Your number..." id="input-phone" type="number" required />
+            </div>
+
+            <div>
+              <label class="form-label" for="input-subject">What are you looking for?</label>
+              <select class="form-control" id="input-subject">
+                <option value="" hidden>I'm looking for...</option>
+                <option>I'm looking for a friend to talk to</option>
+                <option>I'm looking for a partner to spend time with</option>
+                <option>I'm looking for a sugarmommy</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="form-label" for="input-comment">What's your type?</label>
+              <textarea class="form-control" placeholder="My types are..." id="input-comment" rows="5"
+                cols="10"></textarea>
+            </div>
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="contactMe()">Submit</button>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>

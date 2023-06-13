@@ -1,0 +1,175 @@
+<html>
+
+<head>
+    <title>Edit Project</title>
+    <script defer src="public/js/contact.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/81634d0f93.js" crossorigin="anonymous"></script>
+    <!-- <script defer src="public/js/addproject.js"></script> -->
+    <style>
+        @import url('https://api.fontshare.com/v2/css?f[]=switzer@101,600,701,800,501,601,900,100,700,901,400,201,401,200,300,301,801,500&display=swap');
+
+        * {
+            font-family: 'Switzer', sans-serif;
+        }
+
+        #ppc-container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            margin: 3em auto 64px auto;
+            grid-gap: 3em;
+            justify-items: center;
+            max-width: fit-content;
+        }
+
+        @media only screen and (min-width: 768px) {
+            #ppc-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media only screen and (min-width: 992px) {
+            #ppc-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        i:not(.hover-exception),
+        .ppc-title {
+            transition: transform .3s ease-out;
+        }
+
+        i:hover:not(.hover-exception),
+        .ppc-title:hover {
+      transform: scale(1.01);
+        }
+
+        .navbar {
+            background-color: orange !important;
+        }
+    </style>
+
+</head>
+
+<body class="bg-body-secondary">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="/public/image/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end text-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">
+                            <i class="fa-solid fa-house"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-bs-toggle="modal" data-bs-target="#add-project">
+                            <i class="fa-solid fa-file-circle-plus"></i> Edit Project
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-collapse collapse justify-content-end text-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item btn btn-outline-danger btn-sm">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contact">
+                            <i class="fa-solid fa-address-book"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    
+    <div class="p-3">
+        <form action="/edit-project/{{.Project.ID}}" method="post" class="m-auto" style="max-width: 500px;">
+
+            <h1 class="mb-3 text-center fw-bold">EDIT PROJECT</h1>
+
+            <div class="mb-3">
+                <label for="projectName" class="form-label fw-bold">Project Name</label>
+                <input type="text" class="form-control" name="projectName" id="projectName" value="{{.Project.ProjectName}}" required/>
+            </div>
+            
+            <div class="mb-3 row">
+                <div class="col">
+                    <label for="startDate" class="form-label fw-bold">Start Date</label>
+                    <input type="date" class="form-control" name="startdate" id="startDate" value="{{.StartDate}}" required/>
+                </div>
+                <div class="col">
+                    <label for="endDate" class="form-label fw-bold">End Date</label>
+                    <input type="date" class="form-control" name="enddate" id="endDate" value="{{.EndDate}}" required/>
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="description" class="form-label fw-bold">Description</label>
+                <textarea class="form-control" name="description" id="description" style="resize: none;" required>{{.Project.Description}}</textarea>
+            </div>
+
+            <div class="mb-3 row">
+                <label class="form-label fw-bold">Technologies</label>
+                <div class="col">
+                    <div>
+                        <input class="form-check-input me-auto" type="checkbox" name="Bootstrap" id="Bootstrap" value="Bootstrap" 
+                        {{if
+                        .Project.Bootstrap}}
+                        checked
+                        {{end}}/>
+                        <label class="ms-2" for="Bootstrap">Bootstrap</label>
+                    </div>
+                    <div>
+                        <input class="form-check-input me-auto" type="checkbox" name="Css" id="Css" value="Css"
+                        {{if
+                        .Project.Css}}
+                        checked
+                        {{end}}/>
+                        <label class="ms-2" for="Css">Css</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <input class="form-check-input me-auto" type="checkbox" name="Javascript" id="Javascript" value="Javascript"
+                        {{if
+                        .Project.Javascript}}
+                        checked
+                        {{end}}/>
+                        <label class="ms-2" for="Javascript">Javascript</label>
+                    </div>
+                    <div>
+                        <input class="form-check-input me-auto" type="checkbox" name="Golang" id="Golang" value="Golang"
+                        {{if
+                        .Project.Golang}}
+                        checked
+                        {{end}}/>
+                        <label class="ms-2" for="Golang">Golang</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="formFile" class="form-label fw-bold">Upload Image</label>
+                <input class="form-control" type="file" id="formFile" required>
+            </div>
+
+            <div class="mb-3 text-end">
+                <button class="btn btn-dark rounded-pill fw-bold px-4" type="submit">submit</button>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
