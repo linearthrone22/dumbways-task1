@@ -3,24 +3,20 @@
 <head>
   <title>Home</title>
   <script defer src="public/js/contact.js"></script>
-  <link 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
-    rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
-    crossorigin="anonymous">
-  <script defer 
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/81634d0f93.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/81634d0f93.js" crossorigin="anonymous"></script>
   <!-- <script defer src="public/js/addproject.js"></script> -->
   <style>
     @import url('https://api.fontshare.com/v2/css?f[]=switzer@101,600,701,800,501,601,900,100,700,901,400,201,401,200,300,301,801,500&display=swap');
-    
+
     * {
       font-family: 'Switzer', sans-serif;
     }
-    
+
     #ppc-container {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
@@ -29,31 +25,38 @@
       justify-items: center;
       max-width: fit-content;
     }
-    
+
     @media only screen and (min-width: 768px) {
       #ppc-container {
         grid-template-columns: repeat(2, 1fr);
       }
     }
-    
+
     @media only screen and (min-width: 992px) {
       #ppc-container {
         grid-template-columns: repeat(3, 1fr);
       }
     }
-    
-    i:not(.hover-exception), .ppc-title {
-      transition: color .3s ease-out;
+
+    i:not(.hover-exception),
+    .ppc-title {
+      transition: transform .3s ease-out;
     }
-    
-    i:hover:not(.hover-exception), .ppc-title:hover {
-      color: #ff7300;
+
+    i:hover:not(.hover-exception),
+    .ppc-title:hover {
+      transform: scale(1.09);
     }
-    
+
     .navbar {
-        background-color: orange !important;
-    }</style>
-  
+      background-color: orange !important;
+    }
+
+    label:hover, input:hover {
+      cursor: pointer;
+    }
+  </style>
+
 </head>
 
 <body class="bg-body-secondary">
@@ -72,18 +75,63 @@
               <i class="fa-solid fa-house"></i> Home
             </a>
           </li>
+          {{if .DataSession.IsLogin}}
           <li class="nav-item">
             <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#add-project">
-              <i class="fa-solid fa-file-circle-plus"></i> Add Project
+              <i class="fa-solid fa-file-circle-plus"></i> Project
             </a>
           </li>
+          {{else}}
+          <li class="nav-item">
+            <span class="nav-link disabled" aria-disabled="true">
+              <i class="fa-solid fa-file-circle-plus"></i> Project
+            </span>
+          </li>
+          {{end}}
+
         </ul>
       </div>
       <div class="navbar-collapse collapse justify-content-end text-center" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item btn btn-outline-danger btn-sm">
-            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contact">
-              <i class="fa-solid fa-address-book"></i> Contact
+
+          {{if .DataSession.IsLogin}}
+
+          <li class="nav-item d-flex align-items-center justify-content-center">
+            <a class="nav-link" href="#">
+              Hello, {{.DataSession.Name}}.
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center justify-content-center">
+              <form id="myform" action="/logout" method="POST"></form>
+              <button onclick="document.getElementById('myform').submit()" class=" btn btn-danger btn-sm">
+                Logout
+              </button>
+            </a>
+          </li>
+
+          {{else}}
+
+          <li class="nav-item d-flex align-items-center justify-content-center">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#login">
+              Login
+            </a>
+          </li>
+
+          <li class="nav-item d-flex align-items-center justify-content-center">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#register">
+              Register
+            </a>
+          </li>
+
+          {{end}}
+
+          <li class="nav-item d-flex align-items-center justify-content-center">
+            <a class="nav-link">
+              <button class="btn btn-secondary btn-sm p-1" href="#" data-bs-toggle="modal" data-bs-target="#contact">
+                <i class="fa-solid fa-address-book"></i> Contact
+              </button>
             </a>
           </li>
         </ul>
@@ -93,8 +141,23 @@
   <!-- navbar end -->
 
 
+  {{if .FlashMessage}}
+  {{if .FlashStatus}}
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>{{.FlashMessage}}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {{else}}
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>{{.FlashMessage}}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {{end}}
+  {{end}}
+
+
   <div>
-  <!-- card -->
+    <!-- card -->
 
     <div class="container mt-5" style="margin-bottom: 16rem;">
 
@@ -152,46 +215,55 @@
 
     <!-- projects -->
 
-    <div class="bg-body container-fluid p-5 rounded-top-5 shadow-sm">
+    <div class="bg-body container-fluid p-5 rounded-top-2 shadow-sm">
 
       <div>
 
         <div class="d-flex gap-3 justify-content-center align-items-center">
           <h3 class="my-0 lh-md">MY PROJECTS</h3>
-          <i class="fa-regular fa-square-plus fa-xl" data-bs-toggle="modal" data-bs-target="#add-project"
-            style="cursor: pointer;"></i>
+          <i class="fa-regular fa-square-plus fa-xl" {{if .DataSession.IsLogin}} data-bs-toggle="modal" {{end}} data-bs-target="#add-project"
+            style="cursor: pointer;"
+            ></i>
         </div>
         <div class="container" id="ppc-container">
           {{range $index, $data := .Projects}}
 
-          <div class="card rounded-4 border-0 shadow-sm ppc" style="width: 16rem;">
-            <img src="https://c4.wallpaperflare.com/wallpaper/277/354/502/feelsbadman-pepe-meme-memes-wallpaper-preview.jpg"
+          <div class="card rounded-4 border-0 shadow-sm ppc" style="width: 16em;">
+            <img
+              src="/uploads/{{$data.Image}}"
               class="rounded-top-4 card-img-top">
             <div class="card-body">
-              <h6>{{$data.ProjectName}} {{$index}}</h6>
-              <h8 class="text-muted">duration:<br> {{$data.StartDate}} - {{$data.EndDate}}</h8>
+              <h6><a href="detail-project/{{$data.ID}}"
+                  class="text-decoration-none text-black">{{$data.ProjectName}}</a></h6>
+              <h8 class="text-muted">duration: {{$data.Duration}}</h8>
               <p style="margin: 0;">{{$data.Description}}</p>
               <div class="d-flex gap-2 my-4">
+                {{if $data.Bootstrap}}
                 <i class="fab fa-bootstrap fa-xl"></i>
+                {{end}}
+                {{if $data.Css}}
                 <i class="fab fa-css3-alt fa-xl"></i>
+                {{end}}
+                {{if $data.Javascript}}
                 <i class="fab fa-js fa-xl"></i>
+                {{end}}
+                {{if $data.Golang}}
                 <i class="fab fa-golang fa-xl"></i>
+                {{end}}
               </div>
+              
               <div class="d-flex flex-column justify-content-evenly">
-                <form>
-                  <input 
-                  type="submit" 
-                  class="btn rounded-pill btn-outline-dark btn-sm w-100"
-                  value="Edit">
-                </button>
+                <form action="/edit-project/{{  $data.ID  }} " method="get">
+                  <input type="submit" class="btn rounded-pill btn-outline-dark btn-sm w-100" value="Edit"
+                  {{if not $.DataSession.IsLogin}}disabled{{end}}>
+                  </button>
                 </form>
-                <form action="/delete-project//{{$index}}" method="POST">
-                  <input 
-                  type="submit" 
-                  class="btn rounded-pill btn-outline-danger btn-sm w-100"
-                  value="Delete">
-                </button>
+                <form action="/delete-project/{{ $data.ID }}" method="POST"
+                  onsubmit="return confirm('Are you sure you want to delete {{ $data.ProjectName}}');">
+                  <input type="submit" class="btn rounded-pill btn-outline-danger btn-sm w-100" value="Delete"
+                  {{if not $.DataSession.IsLogin}}disabled{{end}}>
                 </form>
+
               </div>
             </div>
           </div>
@@ -272,16 +344,17 @@
 
         <div class="modal-body">
 
-          <form action="/submit-project" method="post">
+          <form action="/add-project" method="post" enctype="multipart/form-data">
             <div class="mb-3">
               <label for="projectname" class="form-label">Project Name</label>
-              <input placeholder="Project name..." id="projectname" class="form-control" type="text" name="projectName" required />
+              <input placeholder="Project name..." id="projectname" class="form-control" type="text" name="projectName"
+                required />
             </div>
 
             <div class="row mb-3">
               <div class="col">
                 <label class="form-label">Start Date</label>
-                <input id="startdate" class="form-control" type="date" name="startDate"/>
+                <input id="startdate" class="form-control" type="date" name="startDate" />
               </div>
               <div class="col">
                 <label class="form-label">End Date</label>
@@ -291,7 +364,8 @@
 
             <div class="mb-3">
               <label for="inputdesc" class="form-label">Description</label>
-              <textarea placeholder="Project description..." id="inputdesc" class="form-control" rows="5" name="description"></textarea>
+              <textarea placeholder="Project description..." id="inputdesc" class="form-control" rows="5"
+                name="description"></textarea>
             </div>
 
             <div class="mb-3">
@@ -299,26 +373,26 @@
               <div class="row">
                 <div class="col-6 col-md-6">
                   <div class="form-check">
-                    <input id="bootstrap" class="form-check-input" type="checkbox" name="bootStrap"/>
+                    <input id="bootstrap" class="form-check-input" type="checkbox" name="bootstrap" />
                     <label for="bootstrap" class="form-check-label">Bootstrap</label>
                   </div>
                 </div>
                 <div class="col-6 col-md-6">
                   <div class="form-check">
-                    <input id="css" class="form-check-input" type="checkbox" name="css"/>
-                    <label for="css" class="form-check-label">CSS</label>
+                    <input id="js" class="form-check-input" type="checkbox" name="javascript" />
+                    <label for="js" class="form-check-label">Javascript</label>
                   </div>
                 </div>
                 <div class="col-6 col-md-6">
                   <div class="form-check">
-                    <input id="js" class="form-check-input" type="checkbox" name="javaScript"/>
-                    <label for="js" class="form-check-label">JavaScript</label>
+                    <input id="css" class="form-check-input" type="checkbox" name="css" />
+                    <label for="css" class="form-check-label">Css</label>
                   </div>
                 </div>
                 <div class="col-6 col-md-6">
                   <div class="form-check">
-                    <input id="Go" class="form-check-input" type="checkbox" name="goLang"/>
-                    <label for="Go" class="form-check-label">Go</label>
+                    <input id="Go" class="form-check-input" type="checkbox" name="golang" />
+                    <label for="Go" class="form-check-label">Golang</label>
                   </div>
                 </div>
               </div>
@@ -329,12 +403,11 @@
               <label for="input-image" class="form-label">Upload Image</label>
               <label for="input-image" class="form-label">
               </label>
-              <input id="input-image" class="form-control" type="file" required />
+              <input id="input-image" class="form-control" type="file" name="inputImage" required />
             </div>
 
             <div class="d-grip gap-2 d-md-flex justify-content-md-end">
-              <button type="submit" class="btn btn-primary"
-                data-bs-dismiss="modal">Submit</button>
+              <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
             </div>
           </form>
         </div>
@@ -357,19 +430,20 @@
           <form>
             <div>
               <label class="form-label" for="input-name">Name</label>
-              <input class="form-control" placeholder="Your name..." id="input-name" height="100" type="text" required />
+              <input class="form-control" placeholder="Your name..." id="input-name" height="100" type="text"
+                value="{{.DataSession.Name}}" required />
             </div>
-        
+
             <div>
               <label class="form-label" for="input-email">Email</label>
               <input class="form-control" placeholder="Your e-mail..." type="email" id="input-email" required />
             </div>
-        
+
             <div>
               <label class="form-label" for="input-phone">Phone Number</label>
               <input class="form-control" placeholder="Your number..." id="input-phone" type="number" required />
             </div>
-        
+
             <div>
               <label class="form-label" for="input-subject">What are you looking for?</label>
               <select class="form-control" id="input-subject">
@@ -379,12 +453,13 @@
                 <option>I'm looking for a sugarmommy</option>
               </select>
             </div>
-        
+
             <div>
               <label class="form-label" for="input-comment">What's your type?</label>
-              <textarea class="form-control" placeholder="My types are..." id="input-comment" rows="5" cols="10"></textarea>
+              <textarea class="form-control" placeholder="My types are..." id="input-comment" rows="5"
+                cols="10"></textarea>
             </div>
-        
+
           </form>
         </div>
         <div class="modal-footer">
@@ -392,7 +467,74 @@
         </div>
       </div>
     </div>
+  </div>
 
+  <!-- Login -->
+  <div class="modal fade" id="login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Get In Touch</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form method="post" action="/login" class="m-auto" style="max-width: 500px;">
+
+            <div class="mb-3">
+              <label for="userEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="userEmail" name="userEmail" required />
+            </div>
+
+            <div class="mb-3">
+              <label for="userPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="userPassword" name="userPassword" required />
+            </div>
+
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-success">Login!</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Register -->
+  <div class="modal fade" id="register" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Get In Touch</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form method="post" action="/register" class="m-auto" style="max-width: 500px;">
+
+            <div class="mb-3">
+              <label for="userEmail" class="form-label">Name</label>
+              <input type="text" class="form-control" id="userName" name="userName" required />
+            </div>
+
+            <div class="mb-3">
+              <label for="userEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="userEmail" name="userEmail" required />
+            </div>
+
+            <div class="mb-3">
+              <label for="userPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="userPassword" name="userPassword" required />
+            </div>
+
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-success">Register!</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
