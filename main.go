@@ -29,7 +29,7 @@ type Project struct {
 	Javascript  bool
 	Golang      bool
 	Image       string
-	UserID      int
+	Author      string
 }
 
 type User struct {
@@ -176,7 +176,7 @@ func editProject(c echo.Context) error {
 	// Update project in the database
 	_, err := connection.Conn.Exec(
 		context.Background(),
-		"UPDATE tb_projects SET name=$1, start_date=$2, end_date=$3, description=$4, bootstrap=$5, css=$6, javascript=$7, golang=$8  WHERE id=$9",
+		"UPDATE tb_projects SET name=$1, start_date=$2, end_date=$3, description=$4, bootstrap=$5, css=$6, javascript=$7, golang=$8, image=$9  WHERE id=$10",
 		projectName, startDate, endDate, description, bootstrap, css, javascript, golang, id,
 	)
 
